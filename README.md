@@ -106,8 +106,8 @@ All application configuration is located in `application.properties`:
 **Reservation Table**
 
 | Column           | Type    | Notes                                                |
-| ---------------- | ------- | ---------------------------------------------------- |
-| id               | BIGINT  | PK, auto-generated                                   |
+| ---------------- |---------| ---------------------------------------------------- |
+| id               | LONG    | PK, auto-generated                                   |
 | roomNumber       | INT     | Room number                                          |
 | customerName     | VARCHAR | Not null                                             |
 | startDate        | DATE    | Not null                                             |
@@ -116,8 +116,8 @@ All application configuration is located in `application.properties`:
 | paymentMode      | ENUM    | CASH, BANK_TRANSFER, CREDIT_CARD                     |
 | status           | ENUM    | PENDING_PAYMENT, CONFIRMED, CANCELLED                |
 | paymentReference | VARCHAR | Optional for Bank Transfer, required for Credit Card |
-| totalAmount      | BIGINT  | Must be positive                                     |
-| version          | BIGINT  | Optimistic lock version                              |
+| totalAmount      | LONG  | Must be positive                                     |
+| version          | LONG  | Optimistic lock version                              |
 
 ---
 
